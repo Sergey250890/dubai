@@ -1,0 +1,86 @@
+@import 'About';
+@import 'Catalog';
+.main{
+    display: flex;
+
+    padding: 10px;
+    height: calc(100svh - 20px);
+
+    &>section{
+        width: 50%;
+    }
+}
+
+@media(max-width: 1200px){
+    .about_title{
+        font-size: 48px;
+    }
+    .about_button{
+        width: 34px;
+        height: 34px;
+    }
+    .catalog_labels{
+        font-size: 12px;
+        >div:first-child{
+            margin-right: 30px;
+        }
+    }
+    .catalog_button{
+        width: 34px;
+        height: 34px;
+    }
+}
+
+@media(max-width: 991px){
+    .main{
+        flex-direction: column;
+        max-width: 576px;
+        margin: auto;
+        &>section{
+            width: auto;
+        }
+        height: 100%;
+    }
+    .about{
+        padding: 0;
+    }
+    .about_header{
+        margin-bottom: 80px;
+    }
+    .about_footer{
+        justify-content: center;
+    }
+    .about_contact{
+        margin-top: 25px;
+        margin-bottom: 50px;
+    }
+    .about_explore{
+        display: none;
+    }
+
+    .catalog{
+        min-height: 400px;
+    }
+    .catalog_labels{
+        display: none;
+    }
+    .catalog_header{
+        justify-content: flex-end;
+    }
+}
+
+@media(max-width: 576px){
+    .about_subtitle{
+        font-size: 14px;
+    }
+    .about_title{
+        font-size: 28px;
+    }
+    .catalog{
+        padding: 10px;
+    }
+    .catalog_download{
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}

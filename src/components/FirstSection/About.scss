@@ -1,0 +1,125 @@
+.about{
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    &_header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &_buttons{
+        display: flex;
+        align-items: center;
+    }
+
+    &_button{
+        background: #F6F6F6;
+        height: 46px;
+        width: 46px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        margin-left: 8px;
+        transition-duration: 0.2s;
+        &:hover{
+            background: #eeeeee;
+            transform: scale(1.1);
+        }
+    }
+
+    &_subtitle{
+        font-size: 18px;
+        text-align: center;
+    }
+    &_title{
+        font-size: 56px;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    &_footer{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &_contact{
+        padding: 4px 20px 4px 4px;
+        background: #141414;
+        border-radius: 80px;
+        max-width: fit-content;
+        display: flex;
+        align-items: center;
+        color: #fff;
+        cursor: pointer;
+
+        animation: contactAnimation 0.5s normal;
+
+        transition-duration: 0.2s;
+
+        &:hover{
+            background: #333;
+        }
+        span{
+            background: #D5E7EE;
+            border-radius: 50%;
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 37px;
+            height: 37px;
+        }
+    }
+
+    &_explore{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+
+        &:hover &_arrow{
+            width: 71px;
+            height: 71px;
+            transform: translateX(1px);
+            img{
+                width: 30px;
+            }
+        }
+        &_img{
+            margin-left: 15px;
+        }
+
+        &_arrow{
+            transition-duration: 0.1s;
+            background-color: #D5E7EE;
+            width: 23px;
+            height: 23px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+}
+@keyframes contactAnimation {
+    0%{
+        color: #141414;
+        font-size: 0;
+    }
+    85%{
+        color: #141414;
+    }
+    100%{
+        color: #fff;
+        font-size: 16px;
+    }
+}
